@@ -1,7 +1,7 @@
 import java.util.*; 
 
   class B04{ 
-           int mobey; 
+           double money; 
            
  
            void input(){ 
@@ -16,23 +16,25 @@ import java.util.*;
 
  
         void print(){ 
-             int tax;
+             double tax;
              if(this.money<10000000)
-              tax=this.money*(9.5/100);
+              tax=this.money*0.95;
               
               else if(this.money>=10000000&&this.money<40000000)
-              tax=this.money*(19/100);
+              tax=this.money*1.9;
               
               else if(this.money>=40000000&&this.money<80000000)
-              tax=this.money*(28/100);
+              tax=this.money*2.8;
               
-              else tax=this.money*(37/100);
+              else tax=this.money*3.7;
+
+	      System.out.print("연봉금액에 대한 소득세는"+(int)tax+"입니다");
          } 
          
            public static void main(String[] args){ 
 
- 
-               new B04().input(); 
+   
+			new B04().input(); 
 
  
               } 
